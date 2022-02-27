@@ -9,6 +9,10 @@ Original file is located at
 
 #fc_1 => fully connected layer 1
 #v=> value_function, pi is policy
+
+import os
+from tensorflow.keras.layers import Dense
+
 class ActorCriticNetwork(keras.Model):
   def __init__(self,n_actions,layer_1_dms=10,layer_2_dms=5,name='actor_critic',
                checkpoint_dir='/content/tmp/actor_critic'):
